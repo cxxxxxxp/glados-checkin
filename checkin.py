@@ -19,7 +19,7 @@ def start():
     referer = 'https://glados.rocks/console/checkin'
     payload = '{"token":"glados_network"}'
     payloaddata = json.dumps(payload)
-    checkin = requests.post(url,data=payloaddata,headers={'cookie': cookie ,'referer': referer})
+    checkin = requests.post(url,data=payloaddata,headers={'cookie': cookie})
     requests.get('https://sc.ftqq.com/' + sckey + '.send?text=cookie过期')
     state =  requests.get(url2,headers={'cookie': cookie ,'referer': referer})
    # print(res)
