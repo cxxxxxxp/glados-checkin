@@ -23,8 +23,9 @@ def start():
 
     if 'message' in checkin.text:
         mess = checkin.json()['message']
-        time = state.json()['data']['leftDays']
-        time = time.split('.')[0]
+        #time = state.json()['data']['leftDays']
+        #time = time.split('.')[0]
+        time = 83
         #print(time)
         if sever == 'on':
             requests.get('https://sctapi.ftqq.com/' + sckey + '.send?text='+mess+'&desp=you have '+time+' days left')
