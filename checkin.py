@@ -17,7 +17,7 @@ def start():
     url= "https://glados.rocks/api/user/checkin"
     url2= "https://glados.rocks/api/user/status"
     referer = 'https://glados.rocks/console/checkin'
-    checkin = requests.post(url,{token:"glados_network"},headers={'cookie': cookie})
+    checkin = requests.post(url,{'token':"glados_network"},headers={'cookie': cookie})
     state =  requests.get(url2,headers={'cookie': cookie ,'referer': referer})
    # print(res)
 
